@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  A strongly-typed resource class, for looking up localized strings, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute()>  _
     Friend Class English
@@ -682,6 +682,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property gameSeriesWin() As String
             Get
                 Return ResourceManager.GetString("gameSeriesWin", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Activation delay.
+        '''</summary>
+        Friend Shared ReadOnly Property lblAdActionDelay() As String
+            Get
+                Return ResourceManager.GetString("lblAdActionDelay", resourceCulture)
             End Get
         End Property
         
@@ -1735,6 +1744,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property tabSettings() As String
             Get
                 Return ResourceManager.GetString("tabSettings", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Raising this value may fix music still playing after a commercial break..
+        '''</summary>
+        Friend Shared ReadOnly Property tipAdActionDelay() As String
+            Get
+                Return ResourceManager.GetString("tipAdActionDelay", resourceCulture)
             End Get
         End Property
         

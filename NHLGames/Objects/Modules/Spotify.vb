@@ -31,6 +31,7 @@ Namespace Objects.Modules
         Public Property ForceToOpen As Boolean
         Public Property PlayNextSong As Boolean
         Public Property AnyMediaPlayer As Boolean
+        Public Property ActionDelay As Integer
 
         Public ReadOnly Property Title As AdModulesEnum = AdModulesEnum.Spotify Implements IAdModule.Title
 
@@ -81,7 +82,7 @@ Namespace Objects.Modules
 
         Private Sub Play()
             If AnyMediaPlayer Then
-                Thread.Sleep(100)
+                Thread.Sleep(ActionDelay)
                 NativeMethods.PressKey(KeyVkPlayPause)
             Else
                 If IsSpotifyPlaying() Then Return
@@ -91,7 +92,7 @@ Namespace Objects.Modules
 
         Private Sub Pause()
             If AnyMediaPlayer Then
-                Thread.Sleep(100)
+                Thread.Sleep(ActionDelay)
                 NativeMethods.PressKey(KeyVkPlayPause)
             Else
                 If Not IsSpotifyPlaying() Then Return

@@ -62,7 +62,7 @@ Namespace Objects.Modules
 
         Private Sub NextSong()
             If AnyMediaPlayer Then
-                Thread.Sleep(100)
+                Thread.Sleep(ActionDelay)
                 NativeMethods.PressKey(KeyVkNextSong)
             Else
                 SendActionKey(KeyNextSong)
@@ -73,7 +73,7 @@ Namespace Objects.Modules
             Dim curr? = NativeMethods.GetForegroundWindowFromHandle()
             Dim spotifyHandle? = Process.GetProcessById(_spotifyId).MainWindowHandle
             NativeMethods.SetForegroundWindowFromHandle(spotifyHandle)
-            Thread.Sleep(100)
+            Thread.Sleep(ActionDelay)
             SendKeys.SendWait(KeyTab) 'to unfocus any current field on spotify
             SendKeys.SendWait(Key)
             NativeMethods.SetBackgroundWindowFromHandle(spotifyHandle)

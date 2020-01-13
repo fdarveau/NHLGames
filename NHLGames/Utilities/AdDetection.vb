@@ -168,13 +168,13 @@ Namespace Utilities
 
         Private Function IsMediaPlayerCurrentlyPlaying() As Boolean
             Dim vlcProcesses = Process.GetProcessesByName("vlc").
-                Where(Function(x) x.MainWindowTitle = "fd://0 - VLC media player" OrElse x.MainWindowTitle.ToLower().Contains(" @ ")).
+                Where(Function(x) x.MainWindowTitle = "fd://0 - VLC media player" OrElse x.MainWindowTitle.ToLower().Contains(" @ ") OrElse x.MainWindowTitle.ToLower().Contains("NHL_GAME_VIDEO")).
                 Select(Function(x) x.Id)
             Dim mpc64Processes = Process.GetProcessesByName("MPC-HC64").
-                Where(Function(x) x.MainWindowTitle = "stdin" OrElse x.MainWindowTitle.ToLower().Contains(" @ ") OrElse x.MainWindowTitle.ToLower().Contains("_complete.m3u8")).
+                Where(Function(x) x.MainWindowTitle = "stdin" OrElse x.MainWindowTitle.ToLower().Contains(" @ ") OrElse x.MainWindowTitle.ToLower().Contains(".m3u8")).
                 Select(Function(x) x.Id)
             Dim mpc32Processes = Process.GetProcessesByName("MPC-HC").
-                Where(Function(x) x.MainWindowTitle = "stdin" OrElse x.MainWindowTitle.ToLower().Contains(" @ ") OrElse x.MainWindowTitle.ToLower().Contains("_complete.m3u8")).
+                Where(Function(x) x.MainWindowTitle = "stdin" OrElse x.MainWindowTitle.ToLower().Contains(" @ ") OrElse x.MainWindowTitle.ToLower().Contains(".m3u8")).
                 Select(Function(x) x.Id)
             Dim mpvProcesses = Process.GetProcessesByName("mpv").
                 Select(Function(x) x.Id)

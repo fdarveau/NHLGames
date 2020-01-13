@@ -449,10 +449,9 @@ Namespace Utilities
                 Form.lblSpotify.Theme = MetroThemeStyle.Dark
                 Form.tgSpotify.Theme = MetroThemeStyle.Dark
                 Form.lblSpotifyDesc.Theme = MetroThemeStyle.Dark
+                Form.lblAdActionDelay.Theme = MetroThemeStyle.Dark
                 Form.txtAdActionDelay.BackColor = Color.FromArgb(80, 80, 80)
                 Form.txtAdActionDelay.ForeColor = Color.LightGray
-                Form.lblAdActionDelayMs.Theme = MetroThemeStyle.Dark
-                Form.lblAdActionDelay.Theme = MetroThemeStyle.Dark
                 Form.lblAdActionDelayMs.Theme = MetroThemeStyle.Dark
                 Form.chkSpotifyForceToStart.Theme = MetroThemeStyle.Dark
                 Form.chkSpotifyPlayNextSong.Theme = MetroThemeStyle.Dark

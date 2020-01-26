@@ -580,11 +580,11 @@ Public Class NHLGamesMetro
                                        If(tgSpotify.Checked, English.msgOn, English.msgOff))
     End Sub
 
-    Private Sub txtAdActionDelay_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMediaControlDelay.KeyPress
+    Private Sub txtMediaControlDelay_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMediaControlDelay.KeyPress
         e.Handled = Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar)
     End Sub
 
-    Private Sub txtAdActionDelay_TextChanged(sender As Object, e As EventArgs) Handles txtMediaControlDelay.TextChanged
+    Private Sub txtMediaControlDelay_TextChanged(sender As Object, e As EventArgs) Handles txtMediaControlDelay.TextChanged
         If Not String.IsNullOrEmpty(txtMediaControlDelay.Text) Then
             AdDetection.Renew()
         End If

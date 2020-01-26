@@ -195,8 +195,8 @@ Namespace Utilities
                     .EnabledSpotifyAndAnyMediaPlayer = form.chkSpotifyAnyMediaPlayer.Checked
                 }
 
-                If Not String.IsNullOrEmpty(form.txtAdActionDelay.Text) Then
-                    _settings.AdActionDelay = form.txtAdActionDelay.Text
+                If Not String.IsNullOrEmpty(form.txtMediaControlDelay.Text) Then
+                    _settings.MediaControlDelay = form.txtMediaControlDelay.Text
                 End If
 
                 _settings.EnabledObsGameSceneHotKey.Key = form.txtGameKey.Text

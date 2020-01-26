@@ -72,9 +72,9 @@ Partial Class NHLGamesMetro
         Me.flpSpotifyDescSettings = New System.Windows.Forms.FlowLayoutPanel()
         Me.tgSpotify = New MetroFramework.Controls.MetroToggle()
         Me.lblSpotifyDesc = New MetroFramework.Controls.MetroLabel()
-        Me.lblAdActionDelay = New MetroFramework.Controls.MetroLabel()
-        Me.txtAdActionDelay = New MetroFramework.Controls.MetroTextBox()
-        Me.lblAdActionDelayMs = New MetroFramework.Controls.MetroLabel()
+        Me.lblMediaControlDelay = New MetroFramework.Controls.MetroLabel()
+        Me.txtMediaControlDelay = New MetroFramework.Controls.MetroTextBox()
+        Me.lblMediaControlDelayMs = New MetroFramework.Controls.MetroLabel()
         Me.cbStreamQuality = New NHLGames.Controls.MetroComboBoxNoMW()
         Me.lblStreamerArgs = New MetroFramework.Controls.MetroLabel()
         Me.lblPlayerArgs = New MetroFramework.Controls.MetroLabel()
@@ -161,7 +161,6 @@ Partial Class NHLGamesMetro
         Me.cbLiveReplay = New NHLGames.Controls.MetroComboBoxNoMW()
         Me.tgDarkMode = New MetroFramework.Controls.MetroToggle()
         Me.lblDarkMode = New MetroFramework.Controls.MetroLabel()
-        Me.flpAdActionDelay = New System.Windows.Forms.FlowLayoutPanel()
         Me.tabConsole = New MetroFramework.Controls.MetroTabPage()
         Me.btnCopyConsole = New MetroFramework.Controls.MetroButton()
         Me.btnClearConsole = New MetroFramework.Controls.MetroButton()
@@ -471,8 +470,8 @@ Partial Class NHLGamesMetro
         Me.tlpSettings.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.tlpSettings.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.tlpSettings.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpSettings.Controls.Add(Me.tlpOBSSettings, 2, 29)
-        Me.tlpSettings.Controls.Add(Me.flpObsDescSettings, 2, 28)
+        Me.tlpSettings.Controls.Add(Me.tlpOBSSettings, 2, 28)
+        Me.tlpSettings.Controls.Add(Me.flpObsDescSettings, 2, 27)
         Me.tlpSettings.Controls.Add(Me.flpSpotifyDescSettings, 2, 25)
         Me.tlpSettings.Controls.Add(Me.cbStreamQuality, 2, 3)
         Me.tlpSettings.Controls.Add(Me.lblStreamerArgs, 0, 22)
@@ -502,7 +501,7 @@ Partial Class NHLGamesMetro
         Me.tlpSettings.Controls.Add(Me.flpSelectedPlayer, 2, 11)
         Me.tlpSettings.Controls.Add(Me.tlpCdnSettings, 2, 7)
         Me.tlpSettings.Controls.Add(Me.lblSpotify, 0, 25)
-        Me.tlpSettings.Controls.Add(Me.lblOBS, 0, 28)
+        Me.tlpSettings.Controls.Add(Me.lblOBS, 0, 27)
         Me.tlpSettings.Controls.Add(Me.flpSpotifyParameters, 2, 26)
         Me.tlpSettings.Controls.Add(Me.lblModules, 0, 24)
         Me.tlpSettings.Controls.Add(Me.flpAdDetection, 2, 24)
@@ -513,14 +512,13 @@ Partial Class NHLGamesMetro
         Me.tlpSettings.Controls.Add(Me.cbLiveReplay, 2, 4)
         Me.tlpSettings.Controls.Add(Me.tgDarkMode, 2, 17)
         Me.tlpSettings.Controls.Add(Me.lblDarkMode, 0, 17)
-        Me.tlpSettings.Controls.Add(Me.flpAdActionDelay, 2, 27)
         Me.tlpSettings.ForeColor = System.Drawing.SystemColors.ControlText
         Me.tlpSettings.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize
         Me.tlpSettings.Location = New System.Drawing.Point(1, 1)
         Me.tlpSettings.Margin = New System.Windows.Forms.Padding(0)
         Me.tlpSettings.Name = "tlpSettings"
         Me.tlpSettings.Padding = New System.Windows.Forms.Padding(0, 0, 20, 0)
-        Me.tlpSettings.RowCount = 31
+        Me.tlpSettings.RowCount = 30
         Me.tlpSettings.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.tlpSettings.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.tlpSettings.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
@@ -549,7 +547,6 @@ Partial Class NHLGamesMetro
         Me.tlpSettings.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.tlpSettings.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.tlpSettings.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.tlpSettings.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.tlpSettings.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
         Me.tlpSettings.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
         Me.tlpSettings.Size = New System.Drawing.Size(982, 514)
@@ -567,7 +564,7 @@ Partial Class NHLGamesMetro
         Me.tlpOBSSettings.Controls.Add(Me.flpAdSceneHotkey, 1, 1)
         Me.tlpOBSSettings.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpOBSSettings.Enabled = False
-        Me.tlpOBSSettings.Location = New System.Drawing.Point(174, 990)
+        Me.tlpOBSSettings.Location = New System.Drawing.Point(174, 960)
         Me.tlpOBSSettings.Margin = New System.Windows.Forms.Padding(0)
         Me.tlpOBSSettings.Name = "tlpOBSSettings"
         Me.tlpOBSSettings.RowCount = 2
@@ -826,7 +823,7 @@ Partial Class NHLGamesMetro
         Me.flpObsDescSettings.Controls.Add(Me.tgOBS)
         Me.flpObsDescSettings.Controls.Add(Me.lblOBSDesc)
         Me.flpObsDescSettings.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.flpObsDescSettings.Location = New System.Drawing.Point(174, 960)
+        Me.flpObsDescSettings.Location = New System.Drawing.Point(174, 930)
         Me.flpObsDescSettings.Margin = New System.Windows.Forms.Padding(0)
         Me.flpObsDescSettings.Name = "flpObsDescSettings"
         Me.flpObsDescSettings.Size = New System.Drawing.Size(771, 30)
@@ -859,9 +856,9 @@ Partial Class NHLGamesMetro
         '
         Me.flpSpotifyDescSettings.Controls.Add(Me.tgSpotify)
         Me.flpSpotifyDescSettings.Controls.Add(Me.lblSpotifyDesc)
-        Me.flpSpotifyDescSettings.Controls.Add(Me.lblAdActionDelay)
-        Me.flpSpotifyDescSettings.Controls.Add(Me.txtAdActionDelay)
-        Me.flpSpotifyDescSettings.Controls.Add(Me.lblAdActionDelayMs)
+        Me.flpSpotifyDescSettings.Controls.Add(Me.lblMediaControlDelay)
+        Me.flpSpotifyDescSettings.Controls.Add(Me.txtMediaControlDelay)
+        Me.flpSpotifyDescSettings.Controls.Add(Me.lblMediaControlDelayMs)
         Me.flpSpotifyDescSettings.Dock = System.Windows.Forms.DockStyle.Fill
         Me.flpSpotifyDescSettings.Location = New System.Drawing.Point(174, 870)
         Me.flpSpotifyDescSettings.Margin = New System.Windows.Forms.Padding(0)
@@ -892,57 +889,57 @@ Partial Class NHLGamesMetro
         Me.lblSpotifyDesc.Text = "SPOTIFY_DESC"
         Me.lblSpotifyDesc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'lblAdActionDelay
+        'lblMediaControlDelay
         '
-        Me.lblAdActionDelay.AutoSize = True
-        Me.lblAdActionDelay.Dock = System.Windows.Forms.DockStyle.Right
-        Me.lblAdActionDelay.Location = New System.Drawing.Point(227, 3)
-        Me.lblAdActionDelay.Margin = New System.Windows.Forms.Padding(50, 3, 3, 3)
-        Me.lblAdActionDelay.Name = "lblAdActionDelay"
-        Me.lblAdActionDelay.Size = New System.Drawing.Size(126, 23)
-        Me.lblAdActionDelay.TabIndex = 530
-        Me.lblAdActionDelay.Text = "AD_ACTION_DELAY"
+        Me.lblMediaControlDelay.AutoSize = True
+        Me.lblMediaControlDelay.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lblMediaControlDelay.Location = New System.Drawing.Point(227, 3)
+        Me.lblMediaControlDelay.Margin = New System.Windows.Forms.Padding(50, 3, 3, 3)
+        Me.lblMediaControlDelay.Name = "lblMediaControlDelay"
+        Me.lblMediaControlDelay.Size = New System.Drawing.Size(161, 23)
+        Me.lblMediaControlDelay.TabIndex = 530
+        Me.lblMediaControlDelay.Text = "MEDIA_CONTROL_DELAY"
         '
-        'txtAdActionDelay
-        '
-        '
+        'txtMediaControlDelay
         '
         '
-        Me.txtAdActionDelay.CustomButton.Image = Nothing
-        Me.txtAdActionDelay.CustomButton.Location = New System.Drawing.Point(22, 1)
-        Me.txtAdActionDelay.CustomButton.Name = ""
-        Me.txtAdActionDelay.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.txtAdActionDelay.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtAdActionDelay.CustomButton.TabIndex = 1
-        Me.txtAdActionDelay.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtAdActionDelay.CustomButton.UseSelectable = True
-        Me.txtAdActionDelay.CustomButton.Visible = False
-        Me.txtAdActionDelay.Lines = New String(-1) {}
-        Me.txtAdActionDelay.Location = New System.Drawing.Point(359, 3)
-        Me.txtAdActionDelay.MaxLength = 5
-        Me.txtAdActionDelay.Name = "txtAdActionDelay"
-        Me.txtAdActionDelay.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtAdActionDelay.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtAdActionDelay.SelectedText = ""
-        Me.txtAdActionDelay.SelectionLength = 0
-        Me.txtAdActionDelay.SelectionStart = 0
-        Me.txtAdActionDelay.ShortcutsEnabled = True
-        Me.txtAdActionDelay.Size = New System.Drawing.Size(44, 23)
-        Me.txtAdActionDelay.TabIndex = 528
-        Me.txtAdActionDelay.UseSelectable = True
-        Me.txtAdActionDelay.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtAdActionDelay.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'lblAdActionDelayMs
         '
-        Me.lblAdActionDelayMs.AutoSize = True
-        Me.lblAdActionDelayMs.Location = New System.Drawing.Point(409, 3)
-        Me.lblAdActionDelayMs.Margin = New System.Windows.Forms.Padding(3)
-        Me.lblAdActionDelayMs.Name = "lblAdActionDelayMs"
-        Me.lblAdActionDelayMs.Size = New System.Drawing.Size(26, 19)
-        Me.lblAdActionDelayMs.TabIndex = 529
-        Me.lblAdActionDelayMs.Text = "ms"
-        Me.lblAdActionDelayMs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.txtMediaControlDelay.CustomButton.Image = Nothing
+        Me.txtMediaControlDelay.CustomButton.Location = New System.Drawing.Point(22, 1)
+        Me.txtMediaControlDelay.CustomButton.Name = ""
+        Me.txtMediaControlDelay.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtMediaControlDelay.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtMediaControlDelay.CustomButton.TabIndex = 1
+        Me.txtMediaControlDelay.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtMediaControlDelay.CustomButton.UseSelectable = True
+        Me.txtMediaControlDelay.CustomButton.Visible = False
+        Me.txtMediaControlDelay.Lines = New String(-1) {}
+        Me.txtMediaControlDelay.Location = New System.Drawing.Point(394, 3)
+        Me.txtMediaControlDelay.MaxLength = 5
+        Me.txtMediaControlDelay.Name = "txtMediaControlDelay"
+        Me.txtMediaControlDelay.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtMediaControlDelay.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtMediaControlDelay.SelectedText = ""
+        Me.txtMediaControlDelay.SelectionLength = 0
+        Me.txtMediaControlDelay.SelectionStart = 0
+        Me.txtMediaControlDelay.ShortcutsEnabled = True
+        Me.txtMediaControlDelay.Size = New System.Drawing.Size(44, 23)
+        Me.txtMediaControlDelay.TabIndex = 528
+        Me.txtMediaControlDelay.UseSelectable = True
+        Me.txtMediaControlDelay.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtMediaControlDelay.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'lblMediaControlDelayMs
+        '
+        Me.lblMediaControlDelayMs.AutoSize = True
+        Me.lblMediaControlDelayMs.Location = New System.Drawing.Point(444, 3)
+        Me.lblMediaControlDelayMs.Margin = New System.Windows.Forms.Padding(3)
+        Me.lblMediaControlDelayMs.Name = "lblMediaControlDelayMs"
+        Me.lblMediaControlDelayMs.Size = New System.Drawing.Size(26, 19)
+        Me.lblMediaControlDelayMs.TabIndex = 529
+        Me.lblMediaControlDelayMs.Text = "ms"
+        Me.lblMediaControlDelayMs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'cbStreamQuality
         '
@@ -1755,7 +1752,7 @@ Partial Class NHLGamesMetro
         '
         Me.lblOBS.AutoSize = True
         Me.lblOBS.Dock = System.Windows.Forms.DockStyle.Right
-        Me.lblOBS.Location = New System.Drawing.Point(3, 963)
+        Me.lblOBS.Location = New System.Drawing.Point(3, 933)
         Me.lblOBS.Margin = New System.Windows.Forms.Padding(3)
         Me.lblOBS.Name = "lblOBS"
         Me.lblOBS.Size = New System.Drawing.Size(148, 24)
@@ -1961,16 +1958,6 @@ Partial Class NHLGamesMetro
         Me.lblDarkMode.TabIndex = 524
         Me.lblDarkMode.Text = "DARK"
         Me.lblDarkMode.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'flpAdActionDelay
-        '
-        Me.flpAdActionDelay.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.flpAdActionDelay.Enabled = False
-        Me.flpAdActionDelay.Location = New System.Drawing.Point(174, 930)
-        Me.flpAdActionDelay.Margin = New System.Windows.Forms.Padding(0)
-        Me.flpAdActionDelay.Name = "flpAdActionDelay"
-        Me.flpAdActionDelay.Size = New System.Drawing.Size(771, 30)
-        Me.flpAdActionDelay.TabIndex = 526
         '
         'tabConsole
         '
@@ -2206,17 +2193,17 @@ Partial Class NHLGamesMetro
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.AutoValidate = System.Windows.Forms.AutoValidate.Disable
         Me.BackMaxSize = 150
-        Me.CausesValidation = false
+        Me.CausesValidation = False
         Me.ClientSize = New System.Drawing.Size(990, 655)
         Me.Controls.Add(Me.pnlLogo)
         Me.Controls.Add(Me.spnStreaming)
         Me.Controls.Add(Me.pnlBottom)
         Me.Controls.Add(Me.btnHelp)
         Me.Controls.Add(Me.tabMenu)
-        Me.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.HelpButton = true
-        Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
+        Me.HelpButton = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.ImeMode = System.Windows.Forms.ImeMode.Close
         Me.MinimumSize = New System.Drawing.Size(990, 500)
         Me.Name = "NHLGamesMetro"
@@ -2224,59 +2211,59 @@ Partial Class NHLGamesMetro
         Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.SystemShadow
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Text = "NHLGames"
-        Me.tabMenu.ResumeLayout(false)
-        Me.tabGames.ResumeLayout(false)
-        Me.tabGames.PerformLayout
-        Me.pnlGameBar.ResumeLayout(false)
-        Me.tabSettings.ResumeLayout(false)
-        Me.tlpSettings.ResumeLayout(false)
-        Me.tlpSettings.PerformLayout
-        Me.tlpOBSSettings.ResumeLayout(false)
-        Me.tlpOBSSettings.PerformLayout
-        Me.flpGameSceneHotkey.ResumeLayout(false)
-        Me.flpGameSceneHotkey.PerformLayout
-        Me.flpAdSceneHotkey.ResumeLayout(false)
-        Me.flpAdSceneHotkey.PerformLayout
-        Me.flpObsDescSettings.ResumeLayout(false)
-        Me.flpObsDescSettings.PerformLayout
-        Me.flpSpotifyDescSettings.ResumeLayout(false)
-        Me.flpSpotifyDescSettings.PerformLayout
-        Me.flpStreamerArgs.ResumeLayout(false)
-        Me.flpStreamerArgs.PerformLayout
-        Me.flpPlayerArgs.ResumeLayout(false)
-        Me.flpPlayerArgs.PerformLayout
-        Me.flpOutputSettings.ResumeLayout(false)
-        Me.flpOutputSettings.PerformLayout
-        Me.flpStreamerPath.ResumeLayout(false)
-        Me.flpStreamerPath.PerformLayout
-        Me.flpMpvPath.ResumeLayout(false)
-        Me.flpMpvPath.PerformLayout
-        Me.flpMpcPath.ResumeLayout(false)
-        Me.flpMpcPath.PerformLayout
-        Me.flpVlcPath.ResumeLayout(false)
-        Me.flpVlcPath.PerformLayout
-        Me.flpLanguage.ResumeLayout(false)
-        Me.flpHostsFile.ResumeLayout(false)
-        Me.tlpGamePanelSettings.ResumeLayout(false)
-        Me.tlpGamePanelSettings.PerformLayout
-        Me.flpSelectedPlayer.ResumeLayout(false)
-        Me.tlpCdnSettings.ResumeLayout(false)
-        Me.tlpCdnSettings.PerformLayout
-        Me.flpSpotifyParameters.ResumeLayout(false)
-        Me.flpSpotifyParameters.PerformLayout
-        Me.flpAdDetection.ResumeLayout(false)
-        Me.flpAdDetection.PerformLayout
-        Me.tlpReplay.ResumeLayout(false)
-        Me.tlpReplay.PerformLayout
-        Me.tabConsole.ResumeLayout(false)
-        Me.pnlBottom.ResumeLayout(false)
-        Me.tlpStatus.ResumeLayout(false)
-        Me.tlpStatus.PerformLayout
-        Me.TableLayoutPanel1.ResumeLayout(false)
-        Me.TableLayoutPanel1.PerformLayout
-        Me.ResumeLayout(false)
+        Me.tabMenu.ResumeLayout(False)
+        Me.tabGames.ResumeLayout(False)
+        Me.tabGames.PerformLayout()
+        Me.pnlGameBar.ResumeLayout(False)
+        Me.tabSettings.ResumeLayout(False)
+        Me.tlpSettings.ResumeLayout(False)
+        Me.tlpSettings.PerformLayout()
+        Me.tlpOBSSettings.ResumeLayout(False)
+        Me.tlpOBSSettings.PerformLayout()
+        Me.flpGameSceneHotkey.ResumeLayout(False)
+        Me.flpGameSceneHotkey.PerformLayout()
+        Me.flpAdSceneHotkey.ResumeLayout(False)
+        Me.flpAdSceneHotkey.PerformLayout()
+        Me.flpObsDescSettings.ResumeLayout(False)
+        Me.flpObsDescSettings.PerformLayout()
+        Me.flpSpotifyDescSettings.ResumeLayout(False)
+        Me.flpSpotifyDescSettings.PerformLayout()
+        Me.flpStreamerArgs.ResumeLayout(False)
+        Me.flpStreamerArgs.PerformLayout()
+        Me.flpPlayerArgs.ResumeLayout(False)
+        Me.flpPlayerArgs.PerformLayout()
+        Me.flpOutputSettings.ResumeLayout(False)
+        Me.flpOutputSettings.PerformLayout()
+        Me.flpStreamerPath.ResumeLayout(False)
+        Me.flpStreamerPath.PerformLayout()
+        Me.flpMpvPath.ResumeLayout(False)
+        Me.flpMpvPath.PerformLayout()
+        Me.flpMpcPath.ResumeLayout(False)
+        Me.flpMpcPath.PerformLayout()
+        Me.flpVlcPath.ResumeLayout(False)
+        Me.flpVlcPath.PerformLayout()
+        Me.flpLanguage.ResumeLayout(False)
+        Me.flpHostsFile.ResumeLayout(False)
+        Me.tlpGamePanelSettings.ResumeLayout(False)
+        Me.tlpGamePanelSettings.PerformLayout()
+        Me.flpSelectedPlayer.ResumeLayout(False)
+        Me.tlpCdnSettings.ResumeLayout(False)
+        Me.tlpCdnSettings.PerformLayout()
+        Me.flpSpotifyParameters.ResumeLayout(False)
+        Me.flpSpotifyParameters.PerformLayout()
+        Me.flpAdDetection.ResumeLayout(False)
+        Me.flpAdDetection.PerformLayout()
+        Me.tlpReplay.ResumeLayout(False)
+        Me.tlpReplay.PerformLayout()
+        Me.tabConsole.ResumeLayout(False)
+        Me.pnlBottom.ResumeLayout(False)
+        Me.tlpStatus.ResumeLayout(False)
+        Me.tlpStatus.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.ResumeLayout(False)
 
-End Sub
+    End Sub
     Friend WithEvents txtConsole As RichTextBox
     Friend WithEvents tabMenu As MetroTabControl
     Friend WithEvents tabGames As MetroTabPage
@@ -2422,8 +2409,7 @@ End Sub
     Friend WithEvents lnkRelease As MetroLink
     Friend WithEvents lblTip As MetroLabel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents txtAdActionDelay As MetroTextBox
-    Friend WithEvents lblAdActionDelayMs As MetroLabel
-    Friend WithEvents flpAdActionDelay As FlowLayoutPanel
-    Friend WithEvents lblAdActionDelay As MetroLabel
+    Friend WithEvents txtMediaControlDelay As MetroTextBox
+    Friend WithEvents lblMediaControlDelayMs As MetroLabel
+    Friend WithEvents lblMediaControlDelay As MetroLabel
 End Class

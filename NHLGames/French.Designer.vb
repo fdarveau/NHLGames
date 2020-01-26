@@ -506,15 +506,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Délai d&apos;activation.
-        '''</summary>
-        Friend Shared ReadOnly Property lblAdActionDelay() As String
-            Get
-                Return ResourceManager.GetString("lblAdActionDelay", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to Utiliser le réseau alternatif.
         '''</summary>
         Friend Shared ReadOnly Property lblAlternateCdn() As String
@@ -664,6 +655,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property lblLiveRewindDetails() As String
             Get
                 Return ResourceManager.GetString("lblLiveRewindDetails", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Délai des contrôles de médias.
+        '''</summary>
+        Friend Shared ReadOnly Property lblMediaControlDelay() As String
+            Get
+                Return ResourceManager.GetString("lblMediaControlDelay", resourceCulture)
             End Get
         End Property
         
@@ -1262,15 +1262,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Augmenter cette valeur peut corriger la musique qui continue après une pause commerciale..
-        '''</summary>
-        Friend Shared ReadOnly Property tipAdActionDelay() As String
-            Get
-                Return ResourceManager.GetString("tipAdActionDelay", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to Stream brisé.
         '''</summary>
         Friend Shared ReadOnly Property tipBrokenStream() As String
@@ -1375,6 +1366,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property tipLiveStatusRewind() As String
             Get
                 Return ResourceManager.GetString("tipLiveStatusRewind", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Augmenter cette valeur peut corriger les médias qui continue après une pause commerciale..
+        '''</summary>
+        Friend Shared ReadOnly Property tipMediaControlDelay() As String
+            Get
+                Return ResourceManager.GetString("tipMediaControlDelay", resourceCulture)
             End Get
         End Property
         

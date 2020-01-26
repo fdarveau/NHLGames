@@ -92,13 +92,13 @@ Namespace Utilities
             Form.tt.SetToolTip(Form.btnOutput, NHLGamesMetro.RmText.GetString("tipBrowse"))
             Form.tt.SetToolTip(Form.tbProxyPort, NHLGamesMetro.RmText.GetString("tipTrackBarMove"))
             Form.tt.SetToolTip(Form.tbLiveRewind, NHLGamesMetro.RmText.GetString("tipTrackBarMove"))
-            Form.tt.SetToolTip(Form.lblAdActionDelay, NHLGamesMetro.RmText.GetString("tipAdActionDelay"))
+            Form.tt.SetToolTip(Form.lblMediaControlDelay, NHLGamesMetro.RmText.GetString("tipMediaControlDelay"))
 
             Form.lblModules.Text = NHLGamesMetro.RmText.GetString("lblModules")
             Form.lblModulesDesc.Text = NHLGamesMetro.RmText.GetString("lblModulesDesc")
             Form.lblSpotify.Text = NHLGamesMetro.RmText.GetString("lblSpotify")
             Form.lblSpotifyDesc.Text = NHLGamesMetro.RmText.GetString("lblSpotifyDesc")
-            Form.lblAdActionDelay.Text = NHLGamesMetro.RmText.GetString("lblAdActionDelay")
+            Form.lblMediaControlDelay.Text = NHLGamesMetro.RmText.GetString("lblMediaControlDelay")
             Form.lblOBS.Text = NHLGamesMetro.RmText.GetString("lblObs")
             Form.lblOBSDesc.Text = NHLGamesMetro.RmText.GetString("lblObsDesc")
             Form.lblObsAdEndingHotkey.Text = NHLGamesMetro.RmText.GetString("lblObsAdEndingHotkey")
@@ -333,7 +333,7 @@ Namespace Utilities
                 Form.chkSpotifyForceToStart.Checked = configs.EnabledSpotifyForceToOpen
                 Form.chkSpotifyPlayNextSong.Checked = configs.EnabledSpotifyPlayNextSong
                 Form.chkSpotifyAnyMediaPlayer.Checked = configs.EnabledSpotifyAndAnyMediaPlayer
-                Form.txtAdActionDelay.Text = configs.AdActionDelay
+                Form.txtMediaControlDelay.Text = configs.MediaControlDelay
 
                 Form.txtAdKey.Text = configs.EnabledObsAdSceneHotKey.Key
                 Form.chkAdCtrl.Checked = configs.EnabledObsAdSceneHotKey.Ctrl
@@ -449,10 +449,10 @@ Namespace Utilities
                 Form.lblSpotify.Theme = MetroThemeStyle.Dark
                 Form.tgSpotify.Theme = MetroThemeStyle.Dark
                 Form.lblSpotifyDesc.Theme = MetroThemeStyle.Dark
-                Form.lblAdActionDelay.Theme = MetroThemeStyle.Dark
-                Form.txtAdActionDelay.BackColor = Color.FromArgb(80, 80, 80)
-                Form.txtAdActionDelay.ForeColor = Color.LightGray
-                Form.lblAdActionDelayMs.Theme = MetroThemeStyle.Dark
+                Form.lblMediaControlDelay.Theme = MetroThemeStyle.Dark
+                Form.txtMediaControlDelay.BackColor = Color.FromArgb(80, 80, 80)
+                Form.txtMediaControlDelay.ForeColor = Color.LightGray
+                Form.lblMediaControlDelayMs.Theme = MetroThemeStyle.Dark
                 Form.chkSpotifyForceToStart.Theme = MetroThemeStyle.Dark
                 Form.chkSpotifyPlayNextSong.Theme = MetroThemeStyle.Dark
                 Form.chkSpotifyAnyMediaPlayer.Theme = MetroThemeStyle.Dark
